@@ -23,3 +23,10 @@ Cloudflare Pages builds the site from this repo on every push to `main`:
 - Output directory: `_site`
 - Environment variables: `JEKYLL_ENV=production`, `RUBY_VERSION=3.3.0`
 - Custom domain: `omusing.io` (add under the project's Custom domains tab)
+
+## Conventions
+
+- Published posts: `_posts/YYYY-MM-DD-slug.md`.
+- Work in progress: `_drafts/` (not built unless `--drafts` is passed). Start from `_drafts/_TEMPLATE.md`.
+- Images: `assets/img/posts/<slug>/`.
+- Ordering: newest first by front matter `date`. Include time and timezone offset so same-day posts sort reliably.
