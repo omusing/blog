@@ -7,7 +7,7 @@ description: Why a single brute-force prompt does not scale for reviewing pull r
 canonical_url: https://blog.houzz.com/agentic-pr-review-brute-force-prompt-limits/
 image:
   path: /assets/img/posts/2026-10-12-agentic-pr-review-brute-force-prompt-limits/hero.png
-  alt: "Cartoon: a developer tells a bearded colleague "please wait while my AI validates your 2-line code change" as a pile of tokens labeled 650K burns behind them."
+  alt: 'Cartoon: a developer tells a bearded colleague "please wait while my AI validates your 2-line code change" as a pile of tokens labeled 650K burns behind them.'
 mermaid: true
 ---
 

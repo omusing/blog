@@ -7,7 +7,7 @@ description: Governance, authority and institutional knowledge in agentic PR rev
 canonical_url: https://blog.houzz.com/agentic-pr-review-governance-institutional-knowledge/
 image:
   path: /assets/img/posts/2026-10-26-agentic-pr-review-governance-institutional-knowledge/hero.png
-  alt: "Cartoon: a developer tangled in hoses sprays water at a burning pile of tokens, saying "They say we have to keep the human in the loop" while a colleague watches with a coffee mug."
+  alt: 'Cartoon: a developer tangled in hoses sprays water at a burning pile of tokens, saying "They say we have to keep the human in the loop" while a colleague watches with a coffee mug.'
 mermaid: true
 ---
 

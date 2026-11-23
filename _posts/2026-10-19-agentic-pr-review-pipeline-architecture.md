@@ -7,7 +7,7 @@ description: A workable pipeline architecture for fast, cheap and precise agenti
 canonical_url: https://blog.houzz.com/agentic-pr-review-pipeline-architecture/
 image:
   path: /assets/img/posts/2026-10-19-agentic-pr-review-pipeline-architecture/hero.png
-  alt: "Cartoon: a developer wheels a barrow of encyclopedias and novels toward a burning pile of tokens, saying "More context never hurts" while a colleague watches with a coffee mug."
+  alt: 'Cartoon: a developer wheels a barrow of encyclopedias and novels toward a burning pile of tokens, saying "More context never hurts" while a colleague watches with a coffee mug.'
 mermaid: true
 ---
 
