@@ -1,0 +1,30 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Takeaway boxes: <div class="takeaway" markdown="1"> ... </div> */
+.takeaway {
+  background-color: #b2e1ce;
+  color: #1f2d27;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+
+  a { color: #0b5d44; }
+  code { color: #1f2d27; background-color: rgba(255, 255, 255, 0.45); }
+}

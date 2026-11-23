@@ -134,12 +134,16 @@ Notice there's no attribute name, no type, no description. The added value, "Ins
 }
 ```
 
+<div class="takeaway" markdown="1">
+
 Conveying the PR changes using a Diff Bundle simplifies the work for the agent. This approach holds for any repo, not just for JSON blobs. Here are a few ideas about describing your PR diff as a bundle:
 
 * For code changes, extract the entire affected function or class
 * For visual asset changes, extract a rectangle that isolates the change
 * For configuration changes, extract an entire JSON/YAML container
 * For contract changes (API, service, schema), extract the entire call descriptor
+
+</div>
 
 ### Takeaway 2: Don't Throw the Kitchen Sink at the LLM
 
@@ -175,9 +179,14 @@ Our Asset Reference looks something like this:
     ]
 }
 ```
+
+<div class="takeaway" markdown="1">
+
 For your own repo, consider:
 * Create an Asset Reference for each of your asset types: classes and their purposes and contracts, APIs and their surfaces, core UI components, and the reference lists your rules check against, such as approved values, valid owners, or deprecated symbols. Present each with its file location, and strive for a consistent shape across the asset types.
 * PR check is not the appropriate time for the LLM to **crawl across other repos** for information. If it's necessary for the PR to check across repos, ensure each repo provides an MCP, an MD file or a bundle to convey its integration surfaces (APIs, services, library classes), allowing the agent to load it only when needed.
+
+</div>
 
 ### Takeaway 3: Build a Catalog of Rules
 
@@ -221,9 +230,13 @@ checks:
 
 The PR Checker Rules are not the final artifact; they are only a source of truth. In my current implementation of the PR checker, I decided to group together the LLM-facing rules by asset type, which fits how the evaluation reads both prompt and changes - one asset type at a time. Because the rules stay separate in the origin form, I can revisit or tweak how they are applied as needed.
 
+<div class="takeaway" markdown="1">
+
 For your own repo, consider:
 * Distinguish your repo's asset types: code, configuration, docs, specs, CSS and images each carry their own rules, and the tests for one rarely apply to another. State the asset on each rule, and keep the rules separate when they run.
 * Structure your tests as prose and make each test autonomous. Grouping the tests together, running them serially or in parallel should be a decision you can alter later.
+
+</div>
 
 ### Takeaway 4: Push for Deterministic Checks
 
@@ -266,11 +279,15 @@ This is why I argue for handling the comparison deterministically rather than as
 
 The "inherited attribute" test case is more complex than the "needle in the haystack" first example, and a similarity threshold is admittedly a blunter instrument than an LLM's judgement. But bluntness is not inaccuracy: the check flags the right attributes for the purpose of a PR review, and it does so identically every time. My argument here is that many "eval" judgements can be moved to "deterministic", and that doing so relocates the cost of the LLM from every review run to a single up-front code generation.
 
+<div class="takeaway" markdown="1">
+
 For your own repo, consider the following deterministic checks:
 
 * Flag functions that exceed length or depth of nesting
 * Flag circular dependencies between classes - this kind of graph mapping is hard to code manually, but trivial to generate with LLM.
 * Flag regressions and changes in public-facing contracts - SDKs, APIs, GQL handlers and Services
+
+</div>
 
 ---
 

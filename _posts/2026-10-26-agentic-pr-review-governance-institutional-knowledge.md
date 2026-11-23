@@ -55,10 +55,14 @@ flowchart LR
     classDef default stroke-width:2px,fill:#ffffff,stroke:#a8a29e,color:#44403c;
 ```
 
+<div class="takeaway" markdown="1">
+
 Can you imagine how this applies to your own use cases? Consider:
 * What are your typical PR review observations? What are your pet peeves that trigger you? Can you rationalize them and put them into prose?
 * How much of the trigger prose can be put into deterministic code, if writing code was not a concern?
 * What will it take for you to have a framework to expedite writing new PR checks? Can a Skill help you define new checks, compile them to code, and evaluate their performance against the offending PR?
+
+</div>
 
 ### Takeaway 6: Write Actionable Reviews
 
@@ -89,9 +93,13 @@ Taking the example PR from part 1 of this series, a PR checker report should rea
            /docs/attribute_naming_convention.md
 ```
 
+<div class="takeaway" markdown="1">
+
 For your own repos, consider:
 * Audit your own review comments (or PR bot findings): how many name the problem only, versus naming the problem and offering the fix?
 * When you flag something, could the author act on your comment alone, or would they still need to ask you a follow-up question? If the latter, consider there are knowledge gaps that need addressing.
+
+</div>
 
 ### Takeaway 7: Turn Personal Knowledge into Institutional Knowledge
 
@@ -118,11 +126,15 @@ In the Product Event Taxonomy repo:
 
 Manual PR reviews are the place where you can spot the repo failing to define its specs, communicate them, or enforce its standards. The solution is to continuously **Turn Personal Knowledge into Institutional Knowledge**. Do that, and you will empower your agentic co-authors, and earn the ability to walk away from the project safely: the standards you hold don't leave when you do.
 
+<div class="takeaway" markdown="1">
+
 Can you think of turning personal knowledge to institutional knowledge? Consider:
 * Is there a library or custom code which you use for testing, which nobody else knows about?
 * Are there hidden assets in your repo which you know could be useful sometime in the future?
 * Is your code developed from specs? Are the specs up-to-date? Are they complete? Can they be used to evaluate code changes?
 * Does your repo follow standards for product lifecycle, coding, visual design, accessibility, deployment, testing, scalability, I18n, security, privacy, costs? Can they be used to evaluate the project's specs?
+
+</div>
 
 ### Takeaway 8: Passing Quality Isn't the Same as Having Authority
 
@@ -152,11 +164,15 @@ I considered three heuristics for deciding which PRs may merge automatically:
 
 For my part, nothing merges in my repo without my explicit approval, as I evaluate the three heuristics above going forward. Months into running the checker, the nuanced findings still surface often enough that I am not ready to hand over the final call. My preference is to err towards control and granularity, with the intent of gradually allowing auto-approval as test coverage and the PR maintenance loop mature.
 
+<div class="takeaway" markdown="1">
+
 For your own repos, consider:
 * Which categories of change in your repo should never be auto-merged, no matter how clean the diff looks?
 * Can you annotate files, classes and functions to make sure an agent never lets them slip through PR without human approval?
 * Is that rule enforced structurally (CODEOWNERS, required reviewers, a hard gate), or does it currently rely on someone remembering to ask?
 * Can you think of trivial changes that should be auto-merged once they pass? Consider formatting changes, typo fixes in comments, new unit test cases, version bumps and I18n translation files.
+
+</div>
 
 ## Summary
 
