@@ -1,6 +1,6 @@
 ---
 title: "Ranat Ek: A Toy Xylophone for Decent Sampler"
-date: 2026-11-23 12:00:00 +0200
+date: 2026-11-23 08:00:00 +0000
 categories: [Music Production, Sample Libraries]
 tags: [decent-sampler, sampling, xylophone, ranat-ek, instruments]
 description: "A decorative Thai toy xylophone, sampled into a free preset for Decent Sampler."
