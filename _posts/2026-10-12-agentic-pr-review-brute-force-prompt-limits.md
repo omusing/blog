@@ -6,6 +6,7 @@ categories: [Agentic Development]
 tags: [agentic, pr-review, ai, code-review]
 description: "My first automated PR review burned 650K tokens and 5-7 minutes on a two-line change. Here is what went wrong."
 canonical_url: https://blog.houzz.com/agentic-pr-review-brute-force-prompt-limits/
+canonical_site: "the Houzz Blog"
 image:
   path: /assets/img/posts/2026-10-12-agentic-pr-review-brute-force-prompt-limits/hero.png
   alt: 'Cartoon: a developer tells a bearded colleague "please wait while my AI validates your 2-line code change" as a pile of tokens labeled 650K burns behind them.'

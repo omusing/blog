@@ -6,6 +6,7 @@ categories: [Agentic Development]
 tags: [agentic, pr-review, ai, code-review]
 description: "When agents write the PRs, the repo owner's job shifts from rejecting changes to improving the checker, and some changes still need a human to sign off."
 canonical_url: https://blog.houzz.com/agentic-pr-review-governance-institutional-knowledge/
+canonical_site: "the Houzz Blog"
 image:
   path: /assets/img/posts/2026-10-26-agentic-pr-review-governance-institutional-knowledge/hero.png
   alt: 'Cartoon: a developer tangled in hoses sprays water at a burning pile of tokens, saying "They say we have to keep the human in the loop" while a colleague watches with a coffee mug.'

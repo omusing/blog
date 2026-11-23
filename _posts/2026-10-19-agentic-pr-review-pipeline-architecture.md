@@ -6,6 +6,7 @@ categories: [Agentic Development]
 tags: [agentic, pr-review, ai, code-review]
 description: "How I cut a PR review from 5-7 minutes to about 30 seconds by shaping the diff, splitting up the rules and moving most checks out of the LLM."
 canonical_url: https://blog.houzz.com/agentic-pr-review-pipeline-architecture/
+canonical_site: "the Houzz Blog"
 image:
   path: /assets/img/posts/2026-10-19-agentic-pr-review-pipeline-architecture/hero.png
   alt: 'Cartoon: a developer wheels a barrow of encyclopedias and novels toward a burning pile of tokens, saying "More context never hurts" while a colleague watches with a coffee mug.'
