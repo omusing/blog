@@ -6,6 +6,9 @@ tags: [event-taxonomy, amplitude, analytics, data-governance]
 description: "How to track user behavior reliably at scale, and why treating the event taxonomy as a first-class engineering investment made it hold up."
 canonical_url: https://amplitude.com/community/how-i-amplitude-ofir-zwebner
 canonical_site: "Amplitude's How I Amplitude series"
+image:
+  path: /assets/img/posts/2024-08-27-data-gone-wild-event-taxonomy/hero.png
+  alt: 'Cartoon: a cheerful developer wheels a barrow of badly named events (click, Click, button_click_2, btnClk_FINAL, page_view_v3) toward a mountain of papers and dashboards, saying ''Track everything. We''ll make sense of it later.'' while a bearded colleague with a coffee mug looks on, unimpressed.'
 ---
 
 How do you track user behavior reliably when hundreds of new features are tested and shipped every year, across 6 different client apps and multiple server platforms, with different teams instrumenting independently?
