@@ -2,7 +2,7 @@
 title: "PR Reviews at Agentic Speed - Part 1"
 subtitle: "The Limits of the Brute-Force Prompt"
 date: 2026-10-12 21:20:07 +0000
-categories: [Building Houzz]
+categories: [Agentic Development]
 tags: [agentic, pr-review, ai, code-review]
 description: "My first automated PR review burned 650K tokens and 5-7 minutes on a two-line change. Here is what went wrong."
 canonical_url: https://blog.houzz.com/agentic-pr-review-brute-force-prompt-limits/
@@ -59,7 +59,7 @@ The same PR adds two of the attributes the event references, and modifies a thir
 +        "display_name": "User Type",
 +        "values": [
 +            "Visitor",
-+            "Homeowner", 
++            "Homeowner",
 +            "Professional"
 +        ]
 +    },
@@ -129,7 +129,7 @@ The skill prompt itself looked like this:
 
 ```
 # Purpose
-Your objective is to inspect changes in this repo, then identify the 
+Your objective is to inspect changes in this repo, then identify the
 changes to the JSON files under the `taxonomy` folder and report back issues.
 
 # Methodology
@@ -137,7 +137,7 @@ Iterate through the definition files as outlined in the section below
 
 ## Events
 For files that match `/taxonomy/events/*.json`, check that:
-- "event_name" MUST follow the [Subject] [Action] naming convention, with the 
+- "event_name" MUST follow the [Subject] [Action] naming convention, with the
   action in past participle, written in Chicago-Style Capital Case
 - Every address in the array value "owners" MUST appear in the
   node "employee_directory" in `/taxonomy/taxonomy_settings.json`
@@ -148,11 +148,11 @@ In `/taxonomy/attributes.json`, check that for each attribute:
 - Attributes of type "boolean" MUST start with "is_" or "has_"
 - Attribute description MUST elaborate on the attribute's purpose
 - Attribute description MUST match the level of specificity of the attribute's key
-- Data type of existing attributes may not change without validation against 
+- Data type of existing attributes may not change without validation against
   external dependencies
 
 # Report
-Render each of the assets you found in the DIFF scan, and raise the issues you 
+Render each of the assets you found in the DIFF scan, and raise the issues you
 found for each in a list.
 
 ```

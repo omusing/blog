@@ -2,7 +2,7 @@
 title: "PR Reviews at Agentic Speed - Part 2"
 subtitle: "A Workable Pipeline Architecture"
 date: 2026-10-19 15:58:23 +0000
-categories: [Building Houzz]
+categories: [Agentic Development]
 tags: [agentic, pr-review, ai, code-review]
 description: "How I cut a PR review from 5-7 minutes to about 30 seconds by shaping the diff, splitting up the rules and moving most checks out of the LLM."
 canonical_url: https://blog.houzz.com/agentic-pr-review-pipeline-architecture/
@@ -40,16 +40,16 @@ flowchart LR
     A["Taxonomy<br>Definitions"]@{shape: documents}
     B["Asset<br>Reference"]:::det@{shape: document}
     B2["LLM Asset<br/>Reference"]:::llm@{shape: document}
-    
+
     A-->B
     A-->B2
-    
+
   end
 
   subgraph Two[Rules Maintenance]
     C["PR Checker<br>Rules"]@{shape: document} --> D["Deterministic<br>Code"]:::det@{shape: subroutine}
     C --> E["LLM Rules"]:::llm@{shape: documents}
-  end 
+  end
 
   blank[ ]:::spacer
   blank ~~~~ Three
@@ -58,7 +58,7 @@ flowchart LR
 
     F --> P1["Deterministic<br>Checks"]:::det --> R1["Results"]:::det@{shape: document} --> R[Report]@{shape: document}
     F --> P2["LLM Checks"]:::llm --> R2["Results"]:::llm@{shape: document} --> R
-  end 
+  end
 
   B -...- P1
   B2 -...- P2
@@ -107,7 +107,7 @@ Consider the following change to the attribute `"user_type"`, as conveyed in a G
 ```diff
 @@ -6384,7 +6384,9 @@
             "Visitor",
-            "Homeowner", 
+            "Homeowner",
 -           "Professional"
 +           "Professional",
 +           "Inspector"

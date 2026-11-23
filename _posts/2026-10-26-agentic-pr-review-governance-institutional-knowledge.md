@@ -2,7 +2,7 @@
 title: "PR Reviews at Agentic Speed - Part 3"
 subtitle: "Governance, Authority, and Institutional Knowledge"
 date: 2026-10-26 15:53:32 +0000
-categories: [Building Houzz]
+categories: [Agentic Development]
 tags: [agentic, pr-review, ai, code-review]
 description: "When agents write the PRs, the repo owner's job shifts from rejecting changes to improving the checker, and some changes still need a human to sign off."
 canonical_url: https://blog.houzz.com/agentic-pr-review-governance-institutional-knowledge/
