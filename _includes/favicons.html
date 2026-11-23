@@ -1,0 +1,13 @@
+<!--
+  Site favicons. Overrides the theme's default include so it uses the files in /assets/img.
+-->
+
+{% capture img_path %}{{ '/assets/img' | relative_url }}{% endcapture %}
+
+<link rel="icon" type="image/png" sizes="32x32" href="{{ img_path }}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ img_path }}/favicon-16x16.png">
+<link rel="shortcut icon" href="{{ img_path }}/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ img_path }}/apple-touch-icon.png">
+{% if site.pwa.enabled %}
+  <link rel="manifest" href="{{ img_path }}/site.webmanifest">
+{% endif %}
