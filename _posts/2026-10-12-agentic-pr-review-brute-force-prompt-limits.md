@@ -1,10 +1,18 @@
-# Reviewing PRs at Agentic Speed
+---
+title: "PR Reviews at Agentic Speed - Part 1"
+date: 2026-10-12 21:20:07 +0000
+categories: [Building Houzz]
+tags: [agentic, pr-review, ai, code-review]
+description: Why a single brute-force prompt does not scale for reviewing pull requests at agentic speed.
+canonical_url: https://blog.houzz.com/agentic-pr-review-brute-force-prompt-limits/
+mermaid: true
+---
 
 ***Part 1: The Limits of the Brute-Force Prompt***
 
 Agentic development has made it remarkably easy to ship new product features. Software engineers, who previously spent their time planning, writing and verifying their product, are now facing a barrage of code reviews, which become the bottleneck for rolling out new features.
 
-At Houzz, I own our Product Event Taxonomy: the definition of the product events we collect to run experiments and improve the platform, spanning thousands of event names and attributes, across hundreds of screens and core platform entities. The taxonomy lives in GitHub as a set of JSON files, and every week I review dozens of changes to it, submitted as PRs (Pull Requests) by our engineers and analysts. In recent months, agents have been authoring an increasing share of them. As that volume grows, a review process that relies heavily on manual expert validation risks becoming a bottleneck, making it important for our governance model to evolve alongside agent-assisted development.
+At Houzz, I oversee our Product Event Taxonomy: the definition of the product events we collect to run experiments and improve the platform, spanning thousands of event names and attributes, across hundreds of screens and core platform entities. The taxonomy lives in GitHub as a set of JSON files, and every week I review dozens of changes to it, submitted as PRs (Pull Requests) by our engineers and analysts. In recent months, agents have been authoring an increasing share of them. As that volume grows, a review process that relies heavily on manual expert validation risks becoming a bottleneck, making it important for our governance model to evolve alongside agent-assisted development.
 
 "If you can't beat them, join them!" I concluded, and jumped on the agentic bandwagon with my own automated PR reviews. This took a few funny turns, including a first version that spent 5-7 minutes and burned 650K tokens to clear a two-line change. Along the way I earned some takeaways, which I hope you will find meaningful. While my use case is the narrow domain of event taxonomy with JSON as source of truth, I believe the takeaways hold for almost any agentic code review pipeline.
 
@@ -159,4 +167,4 @@ I observed several failure modes:
 - **Instruction Overload:** Not all instructions cost the same. Asking the model to compare an event's name against its implementation notes is cheap and local. Asking it to iterate the full attribute list and resolve references against a separate corpus, such as matching every owner against the company directory, is a different order of work. My prose attempted all of it in a single run, and as I added more of the expensive kind, results grew inconsistent: rules were applied to the wrong asset types, and the directory, buried in a larger settings file, went unchecked.
 - **Uncontrolled Agency & Instability:** The agent would stray out of the restricted folder, look for references elsewhere, and draw its own conclusions from unpredictable sources. The AI results varied depending on the agent and the model. Running locally with a desktop coding agent produced very different results than running a CI-based agent under GitHub's workflows, and the report's output format itself was inconsistent from run to run.
 
-In the next post, I will walk you through the solution I built to address the Agentic PR Review: [Part 2, A Workable Pipeline Architecture](part2.md).
+In the next post, I will walk you through the solution I built to address the Agentic PR Review: [Part 2, A Workable Pipeline Architecture]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %}).

@@ -1,8 +1,16 @@
-# Reviewing PRs at Agentic Speed
+---
+title: "PR Reviews at Agentic Speed - Part 3"
+date: 2026-10-26 15:53:32 +0000
+categories: [Building Houzz]
+tags: [agentic, pr-review, ai, code-review]
+description: Governance, authority and institutional knowledge in agentic PR review.
+canonical_url: https://blog.houzz.com/agentic-pr-review-governance-institutional-knowledge/
+mermaid: true
+---
 
 ***Part 3: Governance, Authority, and Institutional Knowledge***
 
-In [the previous blog post](part2.md), I concluded four takeaways that help improve the scale and precision of PR tests:
+In [the previous blog post]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %}), I concluded four takeaways that help improve the scale and precision of PR tests:
 1. Shape the Diff
 2. Don't Throw the Kitchen Sink at the LLM
 3. Build a Catalog of Rules
@@ -151,10 +159,10 @@ For your own repos, consider:
 
 Agentic development accelerated code production but introduced its own brand of problems. This blog series elaborates on my findings, as I tried to use agents to handle the velocity and agency. Here is what I observed as key to getting agentic PR review to work:
 
-1. **Shape the Diff** ([Part 2](part2.md)) - give the reviewer the whole asset, not a few lines of context.
-2. **Don't Throw the Kitchen Sink at the LLM** ([Part 2](part2.md)) - don't point the agent at the repo, cap the context with curated assets.
-3. **Build a Catalog of Rules** ([Part 2](part2.md)) - scope each rule to the assets it applies to, instead of one long prose ruleset.
-4. **Push for Deterministic Checks** ([Part 2](part2.md)) - use LLMs to write fixed tests, not to run them.
+1. **Shape the Diff** ([Part 2]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %})) - give the reviewer the whole asset, not a few lines of context.
+2. **Don't Throw the Kitchen Sink at the LLM** ([Part 2]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %})) - don't point the agent at the repo, cap the context with curated assets.
+3. **Build a Catalog of Rules** ([Part 2]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %})) - scope each rule to the assets it applies to, instead of one long prose ruleset.
+4. **Push for Deterministic Checks** ([Part 2]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %})) - use LLMs to write fixed tests, not to run them.
 5. **Always Keep Improving** - the point of a manual review becomes improving the checker.
 6. **Write Actionable Reviews** - name the problem and the fix, for humans and agents alike.
 7. **Turn Personal Knowledge into Institutional Knowledge** - formalize what only lives in your head.

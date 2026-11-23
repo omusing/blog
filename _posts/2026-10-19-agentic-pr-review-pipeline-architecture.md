@@ -1,10 +1,16 @@
-# Reviewing PRs at Agentic Speed
+---
+title: "PR Reviews at Agentic Speed - Part 2"
+date: 2026-10-19 15:58:23 +0000
+categories: [Building Houzz]
+tags: [agentic, pr-review, ai, code-review]
+description: A workable pipeline architecture for fast, cheap and precise agentic PR review.
+canonical_url: https://blog.houzz.com/agentic-pr-review-pipeline-architecture/
+mermaid: true
+---
 
 ***Part 2: A Workable Pipeline Architecture***
 
-## Revisiting the PR Review Architecture
-
-In [the previous blog post](part1.md), I outlined my initial steps at creating an AI-driven PR review for Houzz's Product Event Taxonomy repo. The brute-force approach was a single Skill of rules written in pure prose, which attempted to review changes to the repo while keeping the entire repo's content as context. This approach took a long compute time for the tiniest of changes, exhausted our token spend, and failed to deliver consistent results.
+In [the previous blog post]({% post_url 2026-10-12-agentic-pr-review-brute-force-prompt-limits %}), I outlined my initial steps at creating an AI-driven PR review for Houzz's Product Event Taxonomy repo. The brute-force approach was a single Skill of rules written in pure prose, which attempted to review changes to the repo while keeping the entire repo's content as context. This approach took a long compute time for the tiniest of changes, exhausted our token spend, and failed to deliver consistent results.
 
 **As in part 1, the examples below are illustrative proxies rather than the repo's actual contents.**
 
@@ -140,7 +146,7 @@ LLM evaluations are efficient and less likely to fail when given a concise catal
 
 For example, asking the agent to `"check if the new event name follows the [Subject] [Action] pattern"` requires the agent to tell what "Subjects" are. In our system, the subjects are a list of our **core entities** - "User", "Project", "Timeline", "Lead" etc. Given that, the event names `"Project Started"`, `"Project Shared with Customer"` and `"Lead Added to Timeline"` are valid, but `"Project Calendar Appointment Scheduled"` is not. By providing a curated list to the agent, the LLM was quick to judge the inputs; this wouldn't have worked if the list was buried somewhere in an arbitrary folder within the repo, or if the prompt asked the agent to iterate - on-the-fly - through the existing events and derive its own perceived "correct" core entity names.
 
-A more complex LLM task is asking `"check if a new event name conflicts with any existing event name"`. Sending the agent to seek through the entire repo would either force it to load 100K tokens, or go grep-ing around with similar nouns and verbs, trying to find similarities. A simpler approach is to give the agent a curated list of the existing event names.
+A more complex LLM task is asking `"check if a new event name conflicts with any existing event name"`. Sending the agent to seek through the entire repo would either force it to load hundreds of thousands of tokens, or go grep-ing around with similar nouns and verbs, trying to find similarities. A simpler approach is to give the agent a curated list of the existing event names.
 
 Our Asset Reference looks something like this:
 ```json
@@ -222,7 +228,7 @@ It's easy and tempting to prompt agents to do large-scale analysis across unfami
 
 Instead, use the LLM to write code that performs the **deterministic** test, rather than evaluating the test on demand. By moving soft judgement-based evaluation to deterministic tests, you implement the mechanics once, and they stop costing tokens on every review.
 
-In [Part 1](part1.md) I gave an example of validating an event's owners against the company directory. Performing this evaluation using LLM will take precious time, while doing so in code takes a fraction of a second. The `owner_directory_check` in the YAML above is a deterministic check; I use the agent to take the test prompt (`"For each event in the diff...."`) and convert it into a Python script.
+In [Part 1]({% post_url 2026-10-12-agentic-pr-review-brute-force-prompt-limits %}) I gave an example of validating an event's owners against the company directory. Performing this evaluation using LLM will take precious time, while doing so in code takes a fraction of a second. The `owner_directory_check` in the YAML above is a deterministic check; I use the agent to take the test prompt (`"For each event in the diff...."`) and convert it into a Python script.
 
 The same approach can handle much harder cases. For example, consider the following change:
 
@@ -269,4 +275,4 @@ For your own repo, consider the following deterministic checks:
 
 In this post I went through the PR Review framework that I landed on, to address the concerns of speed, costs, control, precision and coverage. Takeaways 1-3 optimized the prompt and context fed into the LLM. Takeaway 4 built on the work of the previous three, and moved LLM-based evals to deterministic checks, the single largest runtime gain in this project.
 
-In the next post I'd like to discuss what agentic development does to the repo owner's job: [Part 3, Governance, Authority, and Institutional Knowledge](part3.md).
+In the next post I'll discuss what agentic development does to the repo owner's job: [Part 3, Governance, Authority, and Institutional Knowledge]({% post_url 2026-10-26-agentic-pr-review-governance-institutional-knowledge %}).
