@@ -11,17 +11,24 @@ image:
   alt: 'Cartoon: a cheerful developer wheels a barrow of badly named events (click, Click, button_click_2, btnClk_FINAL, page_view_v3) toward a mountain of papers and dashboards, saying ''Track everything. We''ll make sense of it later.'' while a bearded colleague with a coffee mug looks on, unimpressed.'
 ---
 
-How do you track user behavior reliably when hundreds of new features are tested and shipped every year, across 6 different client apps and multiple server platforms, with different teams instrumenting independently?
+For the last 6 years, I have worked with engineers, analysts and product managers on event taxonomy. While it was never stated as such, the notion I had to push back on most often was that we should just "track everything, make sense of it later".
 
-Back in 2024 I gave a talk at an **Amplitude community event** on how to design an event taxonomy from scratch at scale. Revisiting it now because the underlying problem hasn't gone away.
+At Houzz, I built a user tracking model that scales. It supports 1,900+ unique event types and 8B+ monthly events, across 6 client apps and multiple server platforms, with different teams instrumenting independently. Engineers, analysts and product managers use it every day.
 
-At Houzz we built a system tracking 1,900+ unique event types across 8B+ monthly events, used daily by our engineers, analysts, and product managers. Getting the taxonomy right, which the talk covers, was the starting point. What made it hold up at such scale was treating it as a first-class engineering investment; our taxonomy became the single source of truth that fed and drove:
+In this talk, I share the model and the methodology behind it. You will learn to:
+
+- Build your tracking plan around the user's journey, not around the UI.
+- Sort every event into one of four types: business outcomes, screens, funnel steps and UI interactions.
+- Use a naming convention and a glossary that keep thousands of events readable.
+- Ask the one question that decides what to track: "What are the business outcomes?"
+
+What made the model hold up at this scale was treating the taxonomy as a first-class engineering investment. It became the single source of truth that feeds and drives:
 
 - Client and server code
 - CDP configuration
 - BI tooling
-- Data warehouse processing pipeline
+- The data warehouse processing pipeline
 
-The payoff comes downstream: high-fidelity data that powers democratization, clear product ownership over what gets tracked, meaningful BI usage and rich context for agentic reports.
+The payoff comes downstream: high-fidelity data that powers democratization, clear product ownership over what gets tracked, meaningful BI usage, and rich context for agentic reports. These results are the testament that it works.
 
-Recording of my talk is [here](https://amplitude.com/community/how-i-amplitude-ofir-zwebner) along with a transcript for easy reading, courtesy of the kind team at Amplitude.
+**[Watch the talk and read the written walkthrough](https://amplitude.com/community/how-i-amplitude-ofir-zwebner)**, from Amplitude's How I Amplitude series.
