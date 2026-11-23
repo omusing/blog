@@ -10,7 +10,8 @@ script_includes:
 ---
 {% comment %}
   Local override of the Chirpy post layout (jekyll-theme-chirpy 7.6.0):
-  no author byline, and the hero image alt text is not rendered as a caption.
+  no author byline, the hero image alt text is not rendered as a caption,
+  and the front matter `subtitle` is shown under the title (the description is used for listings and SEO).
 {% endcomment %}
 
 {% include lang.html %}
@@ -20,8 +21,8 @@ script_includes:
 <article class="px-1" data-toc="{{ enable_toc }}">
   <header>
     <h1 data-toc-skip>{{ page.title }}</h1>
-    {% if page.description %}
-      <p class="post-desc fw-light mb-4">{{ page.description }}</p>
+    {% if page.subtitle %}
+      <p class="post-subtitle fs-4 fw-light mb-4">{{ page.subtitle }}</p>
     {% endif %}
 
     <div class="post-meta text-muted">

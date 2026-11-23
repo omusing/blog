@@ -1,5 +1,6 @@
 ---
 title: "PR Reviews at Agentic Speed - Part 2"
+subtitle: "A Workable Pipeline Architecture"
 date: 2026-10-19 15:58:23 +0000
 categories: [Building Houzz]
 tags: [agentic, pr-review, ai, code-review]
@@ -10,8 +11,6 @@ image:
   alt: 'Cartoon: a developer wheels a barrow of encyclopedias and novels toward a burning pile of tokens, saying "More context never hurts" while a colleague watches with a coffee mug.'
 mermaid: true
 ---
-
-***Part 2: A Workable Pipeline Architecture***
 
 In [the previous blog post]({% post_url 2026-10-12-agentic-pr-review-brute-force-prompt-limits %}), I outlined my initial steps at creating an AI-driven PR review for Houzz's Product Event Taxonomy repo. The brute-force approach was a single Skill of rules written in pure prose, which attempted to review changes to the repo while keeping the entire repo's content as context. This approach took a long compute time for the tiniest of changes, exhausted our token spend, and failed to deliver consistent results.
 

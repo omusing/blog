@@ -29,4 +29,5 @@ Cloudflare Pages builds the site from this repo on every push to `main`:
 - Published posts: `_posts/YYYY-MM-DD-slug.md`.
 - Work in progress: `_drafts/` (not built unless `--drafts` is passed). Start from `_drafts/_TEMPLATE.md`.
 - Images: `assets/img/posts/<slug>/`.
+- Front matter: `title`, `subtitle` (shown under the title and in listings), `description` (the snippet in listings and SEO).
 - Ordering: newest first by front matter `date`. Include time and timezone offset so same-day posts sort reliably.

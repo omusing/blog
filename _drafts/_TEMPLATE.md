@@ -3,7 +3,8 @@ title: Post title
 date: 2026-01-01 09:00:00 +0200
 categories: [Category, Subcategory]
 tags: [lowercase, tags]
-description: One-line summary used for search results and link previews.
+subtitle: Optional subtitle, shown under the title
+description: One-line snippet used in listings, search results and link previews.
 # pin: true
 ---
 

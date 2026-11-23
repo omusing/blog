@@ -1,5 +1,6 @@
 ---
 title: "PR Reviews at Agentic Speed - Part 3"
+subtitle: "Governance, Authority, and Institutional Knowledge"
 date: 2026-10-26 15:53:32 +0000
 categories: [Building Houzz]
 tags: [agentic, pr-review, ai, code-review]
@@ -10,8 +11,6 @@ image:
   alt: 'Cartoon: a developer tangled in hoses sprays water at a burning pile of tokens, saying "They say we have to keep the human in the loop" while a colleague watches with a coffee mug.'
 mermaid: true
 ---
-
-***Part 3: Governance, Authority, and Institutional Knowledge***
 
 In [the previous blog post]({% post_url 2026-10-19-agentic-pr-review-pipeline-architecture %}), I concluded four takeaways that help improve the scale and precision of PR tests:
 1. Shape the Diff

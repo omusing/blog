@@ -1,5 +1,6 @@
 ---
 title: "PR Reviews at Agentic Speed - Part 1"
+subtitle: "The Limits of the Brute-Force Prompt"
 date: 2026-10-12 21:20:07 +0000
 categories: [Building Houzz]
 tags: [agentic, pr-review, ai, code-review]
@@ -10,8 +11,6 @@ image:
   alt: 'Cartoon: a developer tells a bearded colleague "please wait while my AI validates your 2-line code change" as a pile of tokens labeled 650K burns behind them.'
 mermaid: true
 ---
-
-***Part 1: The Limits of the Brute-Force Prompt***
 
 Agentic development has made it remarkably easy to ship new product features. Software engineers, who previously spent their time planning, writing and verifying their product, are now facing a barrage of code reviews, which become the bottleneck for rolling out new features.
 
