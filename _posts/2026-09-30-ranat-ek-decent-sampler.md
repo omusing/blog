@@ -13,6 +13,6 @@ I'm fortunate to have friends who think of me while traveling, and who keep brin
 
 I still can't figure out how my friends found room in their suitcases for this toy [Ranat Ek](https://en.wikipedia.org/wiki/Ranat_ek). Its size aside, its weight alone must have cost more than its original price.
 
-I sampled it and made a free preset for the excellent [Decent Sampler](https://www.decentsamples.com/product/decent-sampler-plugin/), which is also free, so you too can enjoy toying with it.
+I have recently been doing a little music production, and have relied a lot on the amazing and free [Decent Sampler](https://www.decentsamples.com/product/decent-sampler-plugin/), developed and cultivated by the brilliant [David Hilowitz](https://www.davidhilowitz.com/). Inspired by that generosity, I wanted to contribute something back. I sampled the Ranat Ek and made a free preset, so you too can enjoy toying with it.
 
 Download the free Ranat Ek preset: <https://www.decentsamples.com/product/ranat-ek-decorative-thai-xylophone/>
