@@ -3,7 +3,7 @@ title: "PR Reviews at Agentic Speed - Part 2"
 date: 2026-10-19 15:58:23 +0000
 categories: [Building Houzz]
 tags: [agentic, pr-review, ai, code-review]
-description: A workable pipeline architecture for fast, cheap and precise agentic PR review.
+description: "How I cut a PR review from 5-7 minutes to about 30 seconds by shaping the diff, splitting up the rules and moving most checks out of the LLM."
 canonical_url: https://blog.houzz.com/agentic-pr-review-pipeline-architecture/
 image:
   path: /assets/img/posts/2026-10-19-agentic-pr-review-pipeline-architecture/hero.png

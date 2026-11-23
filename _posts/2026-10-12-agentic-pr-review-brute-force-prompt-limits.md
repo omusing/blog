@@ -3,7 +3,7 @@ title: "PR Reviews at Agentic Speed - Part 1"
 date: 2026-10-12 21:20:07 +0000
 categories: [Building Houzz]
 tags: [agentic, pr-review, ai, code-review]
-description: Why a single brute-force prompt does not scale for reviewing pull requests at agentic speed.
+description: "My first automated PR review burned 650K tokens and 5-7 minutes on a two-line change. Here is what went wrong."
 canonical_url: https://blog.houzz.com/agentic-pr-review-brute-force-prompt-limits/
 image:
   path: /assets/img/posts/2026-10-12-agentic-pr-review-brute-force-prompt-limits/hero.png
