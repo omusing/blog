@@ -1,7 +1,7 @@
 ---
 title: "Data Gone Wild: A Survival Guide to Event Taxonomy"
 date: 2024-08-27 12:00:00 +0000
-categories: [Analytics]
+categories: [User Tracking Analytics, Event Taxonomy]
 tags: [event-taxonomy, amplitude, analytics, data-governance]
 description: "How to track user behavior reliably at scale, and why treating the event taxonomy as a first-class engineering investment made it hold up."
 canonical_url: https://amplitude.com/community/how-i-amplitude-ofir-zwebner
